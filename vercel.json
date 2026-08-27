@@ -1,0 +1,13 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/nudge",
+      "schedule": "0 7,13,19 * * *"
+    }
+  ],
+  "functions": {
+    "app/api/ingest/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}
