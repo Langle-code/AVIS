@@ -49,7 +49,7 @@ async function extractPdf(url: string): Promise<{ text: string; type: 'pdf'; tit
   const response = await fetch(url)
   const buffer = await response.arrayBuffer()
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const pdfParse = require('pdf-parse')
+  const pdfParse = require('pdf-parse-fork')
   const data = await pdfParse(Buffer.from(buffer))
   return {
     text: data.text,
