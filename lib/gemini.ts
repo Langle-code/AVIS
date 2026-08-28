@@ -20,7 +20,7 @@ export async function embedText(text: string): Promise<number[]> {
  * Auto-detect the NMAT subject tag from source content
  */
 export async function detectSubject(text: string): Promise<NmatSubject> {
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
   const prompt = `You are an NMAT exam classifier. Given the following text, classify it into exactly one of these NMAT subject areas:
 - biology
 - physical_science
@@ -54,7 +54,7 @@ export async function generateQuestion(
   chunk: string,
   subject: NmatSubject
 ): Promise<GeneratedQuestion | null> {
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
 
   const prompt = `You are an NMAT exam question writer specializing in ${subject.replace('_', ' ')}.
 
