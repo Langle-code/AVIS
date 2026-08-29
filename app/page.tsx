@@ -82,7 +82,7 @@ export default function Home() {
             {loading ? (
               <div className="card" style={{ textAlign: 'center', padding: '56px 28px' }}>
                 <div style={{ fontSize: 30, marginBottom: 10 }}>🌱</div>
-                <p style={{ color: 'var(--moss-light)' }}>Loading your review session…</p>
+                <p style={{ color: 'var(--moss-light)' }}>Hold up, little plant. Still loading your review session…</p>
               </div>
             ) : sessionDone ? (
               <div className="card bloom fade-up" style={{ textAlign: 'center', padding: '56px 28px' }}>
@@ -100,7 +100,7 @@ export default function Home() {
             ) : questions.length === 0 ? (
               <div className="card" style={{ textAlign: 'center', padding: '56px 28px' }}>
                 <div style={{ fontSize: 34, marginBottom: 10 }}> 😵‍💫 </div>
-                <h3 style={{ marginBottom: 8 }}>No questions yet</h3>
+                <h3 style={{ marginBottom: 8 }}>No questions yet. Just you wait</h3>
                 <p style={{ color: 'var(--moss-light)', marginBottom: 24 }}>Add a YouTube link or PDF to get started.</p>
                 <button className="btn-primary" onClick={() => setShowIngest(true)}>Add Study Material</button>
               </div>
@@ -127,7 +127,18 @@ export default function Home() {
             <NotesPanel />
           </div>
         )}
-      </main>
+       </main>
+    <footer style={{
+      textAlign: 'center',
+      padding: '32px 20px',
+      color: 'var(--moss-light)',
+      fontSize: 12,
+      letterSpacing: '0.04em',
+    }}>
+      △ TenshiInc. All Rights Reserved. 2026
+    </footer>
     </div>
+  )
+}
   )
 }
