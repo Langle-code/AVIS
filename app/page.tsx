@@ -90,7 +90,7 @@ export default function Home() {
                 <h2 style={{ marginBottom: 8 }}>Session complete!</h2>
                 <p style={{ color: 'var(--moss-light)', marginBottom: 24 }}>
                   {correctCount} of {questions.length} correct
-                  {correctCount === questions.length ? ' — Perfect round! 🎉' : ' — Keep going, you\'re growing 💪'}
+                  {correctCount === questions.length ? ' — Yeah, that is what I am talking about!' : ' — RUN. RUN. RUN. YOU LITTLE PLANT!'}
                 </p>
                 <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
                   <button className="btn-primary" onClick={() => fetchQuestions(subject)}>Next Round</button>
@@ -99,7 +99,7 @@ export default function Home() {
               </div>
             ) : questions.length === 0 ? (
               <div className="card" style={{ textAlign: 'center', padding: '56px 28px' }}>
-                <div style={{ fontSize: 34, marginBottom: 10 }}>📚</div>
+                <div style={{ fontSize: 34, marginBottom: 10 }}> 😵‍💫 </div>
                 <h3 style={{ marginBottom: 8 }}>No questions yet</h3>
                 <p style={{ color: 'var(--moss-light)', marginBottom: 24 }}>Add a YouTube link or PDF to get started.</p>
                 <button className="btn-primary" onClick={() => setShowIngest(true)}>Add Study Material</button>
